@@ -1,3 +1,3 @@
 <?php
     // Configurações de idiomas
-    require 'languages/langs.config.php';
+    require 'languages/languages.config.php';

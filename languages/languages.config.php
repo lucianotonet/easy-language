@@ -3,8 +3,8 @@
  * EASY LANGUAGE
  * 
  * Simples gerenciador de idiomas em PHP.
- * Gerencia string fixas via gettext()
- *      Requer POEDIT
+ * 
+ * Gerencia string fixas via gettext();  
  * Memoriza idioma selecionado em uma SESSION
  * 
  * 
@@ -14,7 +14,7 @@
  *
  * @author tonetlds
  * @link http://www.lucianotonet.com/
- * @link https://github.com/tontelds/easy-language/
+ * @link https://github.com/tonetlds/easy-language/
  * @license http://opensource.org/licenses/MIT MIT License
  */
 
