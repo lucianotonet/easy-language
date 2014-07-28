@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Exacta ENG\n"
-"POT-Creation-Date: 2014-07-22 14:59-0300\n"
-"PO-Revision-Date: 2014-07-22 14:59-0300\n"
+"POT-Creation-Date: 2014-07-28 15:23-0300\n"
+"PO-Revision-Date: 2014-07-28 15:24-0300\n"
 "Last-Translator: Luciano <contato@lucianotonet.com>\n"
 "Language-Team: Luciano Tonet\n"
 "Language: en_US\n"
@@ -13,12 +13,39 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-SearchPath-0: D:\\Works\\www\\exacta\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: D:\\Works\\www\\easy-language\n"
 
-#: D:\Works\www\exacta/index.php:331
-msgid "Inserir frase para destaque"
-msgstr "Insert your awesome text"
+#: D:\Works\www\easy-language/index.php:19
+msgid "Home"
+msgstr "Home"
 
-#: D:\Works\www\exacta/langs.config.php:27
-msgid "HELLO_WORLD"
-msgstr "Olá em inglês!"
+#: D:\Works\www\easy-language/index.php:24
+msgid "Empresa"
+msgstr "About Us"
+
+#: D:\Works\www\easy-language/index.php:29
+msgid "Serviços"
+msgstr "Our Services"
+
+#: D:\Works\www\easy-language/index.php:34
+msgid "Produtos"
+msgstr "Products"
+
+#: D:\Works\www\easy-language/index.php:39
+msgid "Contato"
+msgstr "Contact"
+
+#: D:\Works\www\easy-language/index.php:44
+msgid "Mudar para pt_BR"
+msgstr "Change to pt_BR"
+
+#: D:\Works\www\easy-language/index.php:49
+msgid "Mudar para en_US"
+msgstr "Change to en_US"
+
+#~ msgid "Inserir frase para destaque"
+#~ msgstr "Insert your awesome text"
+
+#~ msgid "HELLO_WORLD"
+#~ msgstr "Olá em inglês!"
