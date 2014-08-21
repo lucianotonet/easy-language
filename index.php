@@ -1,13 +1,10 @@
 <?php    
-    // Configurações de idiomas
-    require 'languages/languages.config.php';
+   
+   // Configurações de idiomas
+   require 'languages/languages.config.php';
 
-    //Conexão 
-    $link = mysqli_connect("localhost","root","","easylanguage") or die("Erro: " . mysqli_error($link)); 
-    /* utf8 */
-   if (!$link->set_charset("utf8")) {
-       printf("Erro: %s\n", $link->error);
-   }
+   // Conexão com o banco
+   require 'dbconnection.php';
 
 ?>
 <!DOCTYPE html>
