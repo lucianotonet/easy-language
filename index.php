@@ -1,56 +1,143 @@
-<?php
-    
+<?php    
     // Configurações de idiomas
     require 'languages/languages.config.php';
 
+    //Conexão 
+    $link = mysqli_connect("localhost","root","","easylanguage") or die("Erro: " . mysqli_error($link)); 
+    /* utf8 */
+   if (!$link->set_charset("utf8")) {
+       printf("Erro: %s\n", $link->error);
+   }
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <!-- PRISM CSS -->
+   <link rel="stylesheet" href="css/prism.css">
+   <!-- custom styles -->
+   <link rel="stylesheet" href="css/style.css">
+
     <title>Easy Language - https://github.com/tonetlds/easy-language/</title>
 </head>
 <body>
-    
-    <!-- Menu exemplo -->    
-        <ul>
-            <li>
-                <a href="#home">
-                    <?php echo _('Home'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="#empresa">
-                    <?php echo _('Empresa'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="#servicos">
-                    <?php echo _('Serviços'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="#produtos">
-                    <?php echo _('Produtos'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="#contato">
-                    <?php echo _('Contato'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="?lang=pt_BR">
-                    <?php echo _('Mudar para pt_BR'); ?>
-                </a>
-            </li>
-            <li>
-                <a href="?lang=en_US">
-                    <?php echo _('Mudar para en_US'); ?>
-                </a>
-            </li>
-        </ul>
-    <!-- Fim Menu exemplo -->
 
-</body>
+<div class="container">
+   <div class="row">
+
+
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h1 class="panel-title">Idiomas <code><?php echo LANG ?></code></h1>
+         </div>
+         <div class="panel-body">     
+
+
+            <ul class="nav nav-pills">
+               <?php 
+
+               //Variável que conterá todos os idiomas ativos no sistma
+                  global $languages;
+
+               //Antes de tudo, Confere a tabela de idiomas (languages)
+                  //Monta a consulta
+                  $query = "SELECT * FROM languages" or die("Erro na consulta... " . mysqli_error($link));                   
+                  //Executa a query
+                  $results = $link->query($query);
+
+
+                  while($lang = mysqli_fetch_array($results)) { 
+
+                     //Idioma atual = ACTIVE
+                     $active = ($lang["cod"] == LANG)? 'active' : '';
+
+                     echo '<li class="'. $active .'">';
+                     echo '   <a href="?lang='.$lang["cod"].'">';
+                     echo '      <img src="img/flag-'.$lang["cod"].'.png" alt="" title="'.$lang["nome"].'">';
+                     echo '   </a>'; 
+                     echo '</li>';
+                     
+                     // Bandeiras: http://freepsdfiles.net/graphics/free-psd-flags-icon-set
+
+                     //Insere na global
+                     $languages[] = $lang;
+                  }
+               
+               ?>   
+            </ul>
+            <!-- Fim menu idiomas -->
+            
+            <br>
+            <label for="">$_SESSION</label>
+            <pre>$_SESSION['lang'] = <code><?php print_r($_SESSION['lang']); ?></code></pre>
+         </div>   
+      </div>
+
+   
+
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h1 class="panel-title">Strings Fixas</h1>
+         </div>
+         <div class="panel-body"> 
+             <p>Menu exemplo</p>    
+                  <ul class="nav nav-pills">
+                     <li>
+                         <a href="#home">
+                             <?php echo _('Home'); ?>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#empresa">
+                             <?php echo _('Empresa'); ?>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#servicos">
+                             <?php echo _('Serviços'); ?>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#produtos">
+                             <?php echo _('Produtos'); ?>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="#contato">
+                             <?php echo _('Contato'); ?>
+                         </a>
+                     </li>
+                  </ul>
+               <!-- Fim Menu exemplo -->
+               
+               <br>
+
+               <label for="">Arquivo <code>messages.po</code></label>
+               <div class="highlight">
+                  <pre><code class="html">languages/<?php echo LANG ?>/messages.po</code></pre>
+               </div>
+
+         </div>
+      </div>
+   
+
+<?php include 'itens.php'; ?>
+
+
+
+      </div>
+   </div>
+   
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-git1.min.js"></script>
+
+   <!-- Latest compiled and minified JavaScript -->
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+   </body>
 </html>

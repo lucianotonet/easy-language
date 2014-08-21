@@ -44,7 +44,9 @@
         // Salva o idioma selecionado na SESSION para continuar durante a navegação
             // A variável "Language" destrói-se juntamente com a SESSION ao fechar o NAVEGADOR
             // mas não ao fechar a GUIA ou ABA
-        $_SESSION["Language"]  = $language;
+        $_SESSION["lang"]  = $language;
+        // Define uma constante
+        define( 'LANG' , $_SESSION['lang']);
 
         // Pasta com os idiomas 
         $folder     = "languages";
