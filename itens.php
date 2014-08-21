@@ -71,8 +71,7 @@
                $_SESSION['messages'] = array('success' => 'O item foi adicionado com sucesso!');               
             }else{
                $_SESSION['messages'] = array('danger' => 'Não foi possível adicionar o item!');
-            }
-            mysqli_free_result($insert);
+            }            
       }
       // Free result set
       
