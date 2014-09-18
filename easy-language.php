@@ -18,6 +18,18 @@
  * @license http://opensource.org/licenses/MIT MIT License
  */
          
+      /**
+       *    CONFIGURAÇÕES 
+       **/
+      define('ELANG_DEFAULT', 'pt_BR');      // Idioma padrão
+      define('ELANG_DOMAIN', 'messages');    // Domínio dos idiomas
+      define('ELANG_FOLDER', 'languages');   // Pasta com os arquivos de tradução
+      define('ELANG_ENCODE', 'UTF-8');       // Codificação
+
+
+         //Variável que conterá todos os idiomas ativos no sistma
+         global $languages;
+
          // Inicia uma session, se ainda não foi iniciada
          if (session_status() == PHP_SESSION_NONE) {
              session_start();
@@ -34,7 +46,7 @@
             $language  = $_SESSION["lang"]; // Define qual idioma será usado
         }  // SE não for setado nem por get nem na session, aplica o idioma padrão
         else {
-            $language = "pt_BR"; // Idioma padrão
+            $language = ELANG_DEFAULT; // Idioma padrão
             // to do:
                 // Grande diferencial!
                 // Aqui pode ser inserido uma função pra pegar o idioma do navegador
@@ -49,9 +61,9 @@
         define( 'LANG' , $_SESSION['lang']);
 
         // Pasta com os idiomas 
-        $folder     = "languages";
+        $folder     = ELANG_FOLDER;
         // Nome dos arquivos .mo e .po
-        $domain     = "messages";
+        $domain     = ELANG_DOMAIN;
         // Codificação
         $encoding   = 'UTF-8';
          
