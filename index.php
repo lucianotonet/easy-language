@@ -1,7 +1,7 @@
 <?php    
    
    // Configurações de idiomas
-   require 'languages/languages.config.php';
+   include_once( 'easy-language.php' );
 
    // Conexão com o banco
    require 'dbconnection.php';
