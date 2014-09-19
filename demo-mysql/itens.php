@@ -309,9 +309,9 @@
          </div>
       </div>
       <div class="col col-md-6">
-         <label for="">$_SESSION</label>
+         <label for="">$_COOKIE</label>
          <div class="highlight">
-            <pre><code class="html"><?php print_r($_SESSION); ?></code></pre>
+            <pre><code class="html"><?php print_r($_COOKIE); ?></code></pre>
          </div>
       </div>
 

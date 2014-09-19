@@ -1,7 +1,7 @@
 <?php    
    
    // Configurações de idiomas
-   include_once( '../easy-language/easy-language.php' );
+   include_once( '../easy-language.php' );
 
    // Conexão com o banco
    require 'dbconnection.php';
@@ -68,7 +68,11 @@
             <!-- Fim menu idiomas -->
             
             <br>            
-            <pre>$_SESSION['lang'] = <code><?php print_r($_SESSION['lang']); ?></code></pre>
+            <pre>
+            
+               $_COOKIE['<?php echo $cookieName ?>'] = <code><?php print_r( $_COOKIE[ $cookieName ] ); ?></code>
+            
+            </pre>
          </div>   
       </div>
    

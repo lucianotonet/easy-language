@@ -44,7 +44,7 @@
       $language = $cookieDefaultValue;
    } else if (isset($_COOKIE[$cookieName]) && isset($_GET["lang"])) {
       //fazer set do novo valor do cookie
-      setcookie ($cookieName, $_GET["lang"], time() + (3600 * 24));
+      setcookie($cookieName, $_GET["lang"], time() + (3600 * 24));
       $language = $_GET["lang"];
    } else {
       $language = $_COOKIE[$cookieName];
