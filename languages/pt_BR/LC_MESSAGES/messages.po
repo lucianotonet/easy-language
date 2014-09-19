@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Exacta ENG\n"
-"POT-Creation-Date: 2014-07-28 15:20-0300\n"
-"PO-Revision-Date: 2014-07-28 15:20-0300\n"
+"POT-Creation-Date: 2014-09-19 00:27-0300\n"
+"PO-Revision-Date: 2014-09-19 00:27-0300\n"
 "Last-Translator: Luciano <contato@lucianotonet.com>\n"
 "Language-Team:  <contato@lucianotonet.com>\n"
 "Language: pt_BR\n"
@@ -10,36 +10,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.6\n"
-"X-Poedit-Basepath: .\n"
+"X-Poedit-Basepath: D:/Works/www/easy-language\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: D:/Works/www/easy-language\n"
+"X-Poedit-SearchPath-0: D:/Works/www/easy-language/demo\n"
 
-#: D:/Works/www/easy-language/index.php:12
-msgid "Home"
-msgstr ""
-
-#: D:/Works/www/easy-language/index.php:17
-msgid "Empresa"
-msgstr ""
-
-#: D:/Works/www/easy-language/index.php:22
-msgid "Serviços"
-msgstr ""
-
-#: D:/Works/www/easy-language/index.php:27
-msgid "Produtos"
-msgstr ""
-
-#: D:/Works/www/easy-language/index.php:32
-msgid "Contato"
-msgstr ""
-
-#: D:/Works/www/easy-language/index.php:37
-msgid "Mudar para \"pt_BR\""
-msgstr ""
-
-#: D:/Works/www/easy-language/index.php:42
-msgid "Mudar para \"en_US\""
-msgstr ""
+#: D:/Works/www/easy-language/demo/index.php:30
+msgid "Este texto está em português e pronto para tradução!"
+msgstr "Este texto está em português e pronto para tradução!"

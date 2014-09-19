@@ -83,11 +83,10 @@
          
 <div class="panel panel-default">
    <div class="panel-heading">
-      <h1 class="panel-title">Banco de dados <code><?php echo LANG ?></code></h1>
+      <h1 class="panel-title">Demonstração com MYSQL <small></small> </h1>
    </div>
-   <div class="panel-body">    
-      <h2>Banco de dados</h2>
-
+   <div class="panel-body">       
+      <p>Teste e veja como funciona. Insira alguns itens aqui com conteúdos diferentes para cada idioma, depois altere o idioma ali em cima para ver  resultado.</p>
       <?php
          //Mensgens
          if(isset($_SESSION['messages'])){
@@ -102,9 +101,6 @@
             unset($_SESSION['messages']);
          }
       ?>
-
-
-
 
 
    
@@ -188,7 +184,7 @@
 
 
          
-      <p>Itens no idioma <code><?php echo LANG ?></code></p>
+      <p>Exibindo todos os itens no idioma <code><?php echo LANG ?></code></p>
       <?php
     
           //Consulta
@@ -298,13 +294,6 @@
             }
          }
       ?>
-
-      <div class="col col-md-6">
-         <label for="">Object(mysqli)</label>
-         <div class="highlight">
-            <pre><code class="html"><?php print_r($link); ?></code></pre>
-         </div>
-      </div>
 
       <div class="col col-md-6">
          <label for="">$_POST</label>

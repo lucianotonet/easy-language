@@ -12,8 +12,17 @@ v **1.0** semi-beta
 * Utiliza GETTEXT() e arquivos PO e MO *(assim como o WordPress \o/ )*
 * Mantém ativo o idioma selecionado durante toda a sessão
 * Detecta o idioma do navegador e se ajusta automaticamente *(#ainda não faz isso, mas pode fazer se você me ajudar)*
+
 ___
 
+> ### [DEMO 1](http://lucianotonet.com/demos/easy-language/demo) 
+> *Exemplo com strings fixas*
+
+
+> ### [DEMO 2](http://lucianotonet.com/demos/easy-language/demo-mysql) 
+> *Exemplo com mysql*
+
+___
 1. Download
 --------------
 ##### Via git:
@@ -30,7 +39,7 @@ git clone https://github.com/tonetlds/easy-language
 
 2. Instalação
 --------------
-Adicione esta linha no início do sistema, logo após a primeira *"session_start()"* :
+Inclua o Easy-Language logo no início do sistema:
 ```php
 include_once( 'easy-language/easy-language.php' );
 ```
@@ -217,17 +226,13 @@ Licença
 
 Você está convidado a fazer o que quiser com este código, inclusive me ajudar à melhorá-lo!
 
-Obrigado por ler até aqui.
-
-Deus esteja com você.
+Obrigado por ler até aqui. Fique com Deus.
 
 ___
-##Easy-Language
-### Autor
+###Easy-Language
+#### Autor
 Luciano Tonet : [@tonetlds](http://lucianotonet.com)  
 
 [easy-language]:https://github.com/tonetlds/easy-language
 [aqui]:https://github.com/tonetlds/easy-language/archive/master.zip
 [easy-language-download]:https://github.com/tonetlds/easy-language/archive/master.zip
-
-___
