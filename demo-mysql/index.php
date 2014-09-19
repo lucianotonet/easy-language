@@ -66,13 +66,7 @@
                ?>   
             </ul>
             <!-- Fim menu idiomas -->
-            
-            <br>            
-            <pre>
-            
-               $_COOKIE['<?php echo $cookieName ?>'] = <code><?php print_r( $_COOKIE[ $cookieName ] ); ?></code>
-            
-            </pre>
+                                   
          </div>   
       </div>
    

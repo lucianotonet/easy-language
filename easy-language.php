@@ -31,7 +31,7 @@
       define('ELANG_FOLDER', 'easy-language/languages'); // Pasta com os arquivos de tradução padrão
    }
 
-   $cookieName         = "cookie";
+   $cookieName         = "language";
    $cookieDefaultValue = ELANG_DEFAULT;
    $languageFolder     = ELANG_FOLDER;      
    $language           = null;
