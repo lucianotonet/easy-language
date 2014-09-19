@@ -1,7 +1,18 @@
 Easy Language
 =============
 
-Gerenciador de idiomas em PHP.
+Simples gerenciador de idiomas em PHP.
+
+v **1.0** semi-beta
+
+![alt tag](https://raw.githubusercontent.com/tonetlds/easy-language/master/demo/img/print_0.gif)
+
+
+* Facilita a tradução e a gestão de idiomas no site/sistema
+* Utiliza GETTEXT() e arquivos PO e MO *(assim como o WordPress \o/ )*
+* Mantém ativo o idioma selecionado durante toda a sessão
+* Detecta o idioma do navegador e se ajusta automaticamente *(#ainda não faz isso, mas pode fazer se você me ajudar)*
+___
 
 1. Download
 --------------
@@ -115,7 +126,7 @@ Cada idioma deve conter uma pasta com nome idêntico ao seu código ISO, dentro 
 ---
 Preparando o site para tradução
 ------
-Todo o conteúdo do site que será traduzido deverá ser preparado antes de serem gerados os arquivos de tradução.
+Todo o conteúdo que será traduzido deverá ser preparado antes de serem gerados os arquivos de tradução.
 
 Cada string a ser traduzida deve seguir as regras padrão do *[GETTEXT()](http://php.net/manual/pt_BR/function.gettext.php)*.
 
@@ -218,3 +229,5 @@ Luciano Tonet : [@tonetlds](http://lucianotonet.com)
 [easy-language]:https://github.com/tonetlds/easy-language
 [aqui]:https://github.com/tonetlds/easy-language/archive/master.zip
 [easy-language-download]:https://github.com/tonetlds/easy-language/archive/master.zip
+
+___

@@ -21,9 +21,9 @@
       /**
        *    CONFIGURAÇÕES 
        **/
-      define('ELANG_DEFAULT', 'pt_BR');      // Idioma padrão
+      define('ELANG_DEFAULT','pt_BR');      // Idioma padrão
       define('ELANG_DOMAIN', 'messages');    // Domínio dos idiomas
-      define('ELANG_FOLDER', 'languages');   // Pasta com os arquivos de tradução
+      define('ELANG_FOLDER', 'easy-language/languages');   // Pasta com os arquivos de tradução
       define('ELANG_ENCODE', 'UTF-8');       // Codificação
 
 
