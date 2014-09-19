@@ -163,7 +163,7 @@ Baixe o poEdit e instale-o. Será necessário.
 
 ___
 
-####1. Crie uma pasta para o novo idioma
+###1. Crie uma pasta para o novo idioma
 Dentro da pasta ***/easy-language/languages*** crie uma nova pasta com nome igual ao código ISO do idioma desejado, e dentro desta crie outra pasta com nome "LC_MESSAGES".
 
 Exemplo:
@@ -172,41 +172,49 @@ Exemplo:
 mkdir "easy-language/languages/it_IT"
 mkdir "easy-language/languages/it_IT/LC_MESSAGES"
 ```
-####2. Crie um novo catálgo
-* Abra o plicativo **poEdit**.
+###2. Crie um novo catálgo
+* Abra o aplicativo **poEdit**.
 * Clique em "Arquivo > Novo" (ou CTRL + N)
 * Selecione o idioma da nova tradução
 * Salve o arquivo dentro da pasta "LC_MESSAGES", com o nome **messages.po** (é necessário salvar antes para que o programa consiga indexar as strings)
-* Clique no menu "Catálogo > Propriedades" (ou ALT + ENTER)
+* Após salvar, clique no menu "Catálogo > Propriedades" (ou ALT + ENTER)
 * Na janela de propriedades do catálogo, digite o nome do projeto e certifique-se de informar o "Conjunto de caracteres do código-fonte". Recomenda-se **UTF-8**, porém se seus arquivos estiverem em outra codificação, como **ISO-8859** por exemplo, informe-a neste campo.
-* Na guia "caminhos das fontes", adicione o caminho exato até a pasta raíz do seu site/sistema no campo "Caminhos". Exemplo:
-```code
-Caminhos: "C:\xampp\htdocs\meusite"
-```
-![alt tag](http://lucianotonet.com/assinaturas/studionamosca.png)
+* Salve novamente.
+* Na guia "Caminhos das fontes", adicione o caminho exato até a pasta raíz do seu site/sistema no campo "Caminhos":
 
-___
-## Autor
-Luciano Tonet : [@tonetlds](http://lucianotonet.com)  
+![alt tag](https://raw.githubusercontent.com/tonetlds/easy-language/master/demo/img/print_1.jpg)
+* Clique em OK e salve novamente.
+* Clique em "Atualizar" e surpreenda-se. O poEdit escaneará cada arquivo da pasta informada em busca de strings para indexar. Feito isto você verá a relação de palavras e frases prontas para serem traduzidas.
+
+###3. Começe a traduzir
+* Clique no texto fonte que deseja traduzir
+* Digite a tradução no campo **"Tradução"**
+* Salve e teste. Você está pronto :D
+
+![alt tag](https://raw.githubusercontent.com/tonetlds/easy-language/master/demo/img/print_2.gif)
+
+*Cada vez que você salva, um novo arquivo **messages.mo** é gerado.*
+
+> Dica: Pressione CTRL + ENTER para passar para a próxima string.
+
 ___
 Licença
 -------
+[MIT](http://opensource.org/licenses/MIT) 
 
-[MIT](http://opensource.org/licenses/MIT) **\o/ Free Software**
+**\o/ Free Software**
 
-[john gruber]:http://daringfireball.net/
-[@thomasfuchs]:http://twitter.com/thomasfuchs
-[1]:http://daringfireball.net/projects/markdown/
-[marked]:https://github.com/chjj/marked
-[Ace Editor]:http://ace.ajax.org
-[node.js]:http://nodejs.org
-[Twitter Bootstrap]:http://twitter.github.com/bootstrap/
-[keymaster.js]:https://github.com/madrobby/keymaster
-[jQuery]:http://jquery.com
-[@tjholowaychuk]:http://twitter.com/tjholowaychuk
-[express]:http://expressjs.com
+Você está convidado a fazer o que quiser com este código, inclusive me ajudar à melhorá-lo!
+
+Obrigado por ler até aqui.
+
+Deus esteja com você.
+
+___
+##Easy-Language
+### Autor
+Luciano Tonet : [@tonetlds](http://lucianotonet.com)  
+
 [easy-language]:https://github.com/tonetlds/easy-language
 [aqui]:https://github.com/tonetlds/easy-language/archive/master.zip
 [easy-language-download]:https://github.com/tonetlds/easy-language/archive/master.zip
-
-___
