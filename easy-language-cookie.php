@@ -12,9 +12,13 @@
 	if (!isset($_COOKIE[$cookieName]) && !isset($_GET["lg"])) {
 		// caso não exista este é criado com os valores padrão
 		setcookie ($cookieName, $cookieDefaultValue, time() + (3600 * 24));
+		$language = $cookieDefaultValue;
 	} else if (isset($_COOKIE[$cookieName]) && isset($_GET["lg"])) {
 		//fazer set do novo valor do cookie
 		setcookie ($cookieName, $_GET["lg"], time() + (3600 * 24));
-	} else {/* nada acontece para já */}
+		$language = $_GET["lg"];
+	} else {
+		$language = $_COOKIE[$cookieName];
+	}
 	
 	// agora para saber qual o idioma que está em vigor basta verificares o valor da variavel $languages
