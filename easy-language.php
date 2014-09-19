@@ -18,62 +18,43 @@
  * @license http://opensource.org/licenses/MIT MIT License
  */
          
-      /**
-       *    CONFIGURAÇÕES 
-       **/
-      define('ELANG_DEFAULT','pt_BR');      // Idioma padrão
-      define('ELANG_DOMAIN', 'messages');    // Domínio dos idiomas
-      define('ELANG_ENCODE', 'UTF-8');       // Codificação
+   /**
+    *    CONFIGURAÇÕES 
+    **/
+   define('ELANG_DEFAULT','pt_BR');      // Idioma padrão
+   define('ELANG_DOMAIN', 'messages');    // Domínio dos idiomas
+   define('ELANG_ENCODE', 'UTF-8');       // Codificação
 
-      //Test
+   //Test
 
-      if( !defined('ELANG_FOLDER') ){         
-         define('ELANG_FOLDER', 'easy-language/languages'); // Pasta com os arquivos de tradução
-      }
+   if( !defined('ELANG_FOLDER') ){         
+      define('ELANG_FOLDER', 'easy-language/languages'); // Pasta com os arquivos de tradução padrão
+   }
 
+   $cookieName         = "cookie";
+   $cookieDefaultValue = ELANG_DEFAULT;
+   $languageFolder     = ELANG_FOLDER;      
+   $language           = null;
 
-      //Variável que conterá todos os idiomas ativos no sistma
-      global $languages;
+   // verificar se o cookie existe assim como o set de lingua
+   // o periodo de permanencia do cookie é de 24H
+   if (!isset($_COOKIE[$cookieName]) && !isset($_GET["lang"])) {
+      // caso não exista este é criado com os valores padrão
+      setcookie ($cookieName, $cookieDefaultValue, time() + (3600 * 24));
+      $language = $cookieDefaultValue;
+   } else if (isset($_COOKIE[$cookieName]) && isset($_GET["lang"])) {
+      //fazer set do novo valor do cookie
+      setcookie ($cookieName, $_GET["lang"], time() + (3600 * 24));
+      $language = $_GET["lang"];
+   } else {
+      $language = $_COOKIE[$cookieName];
+   }
+    
+   define( 'LANG' , $language);
 
-      // Inicia uma session, se ainda não foi iniciada
-      //if (session_status() == PHP_SESSION_NONE) {
-          session_start();
-      //}
-
-     // verifica se o idioma está setado por GET via parametro "lang" ( Ex: site.com.br?lang=en_EU )        
-     if (isset($_GET["lang"])) {
-         // to do:
-             // Se o idioma não existir vai voltar ao padrão
-             // Aqui pode ser colocado uma condição para corrigir isso                
-         $language = $_GET["lang"]; // Define qual idioma será usado
-     }  // SENÃO verifica se está setado na SESSION
-     else if (isset($_SESSION["lang"])) {
-         $language  = $_SESSION["lang"]; // Define qual idioma será usado
-     }  // SE não for setado nem por get nem na session, aplica o idioma padrão
-     else {
-         $language = ELANG_DEFAULT; // Idioma padrão
-         // to do:
-             // Grande diferencial!
-             // Aqui pode ser inserido uma função pra pegar o idioma do navegador
-             // Ou seja, o site detecta o idioma "automaticamente".
-     }
-      
-     // Salva o idioma selecionado na SESSION para continuar durante a navegação
-         // A variável "Language" destrói-se juntamente com a SESSION ao fechar o NAVEGADOR
-         // mas não ao fechar a GUIA ou ABA
-     $_SESSION["lang"]  = $language;
-     // Define uma constante
-     define( 'LANG' , $_SESSION['lang']);
-
-     // Codificação
-     $encoding   = ELANG_ENCODE;
-   
-      // //Agora é por conta do PHP...
-      // putenv("LC_ALL=$language");
-      // setlocale(LC_ALL, $language);
-      // bindtextdomain("messages", "languages");
-      // textdomain("messages"); //gettext files will be created like messages.po, messages.mo etc).
-  
+   // Codificação
+   $encoding   = ELANG_ENCODE;
+    
    // Não toque!
    putenv("LC_ALL=$language");
    setlocale(LC_ALL, $language);
